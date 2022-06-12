@@ -72,6 +72,7 @@ nmap <F7> :set nopaste<CR>
 au filetype go inoremap <buffer> . .<C-x><C-o>
 
 "Go syntax highlighting
+"This may overwrite syntax in "~/.vim/syntax/go.vim"
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
