@@ -145,6 +145,21 @@ install_multiple_cursors() {
 	check_install multiple-cursors
 }
 
+install_vimclosetag() {
+	echo "install vim-closetag ..."
+
+	PLUGIN=$BUNDLEDIR/vim-closetag
+	SRC=https://github.com/alvan/vim-closetag
+
+	if [ -d $PLUGIN ]; then
+		git -C $PLUGIN config pull.rebase true
+		git -C $PLUGIN pull
+	else
+		git -C $BUNDLEDIR clone $SRC 1>/dev/null 2>/dev/null
+	fi
+	check_install vim-closetag
+}
+
 install_configs() {
 	echo "install configs ..."
 	cp $CONFIGDIR/*.vim $VIMDIR/syntax/ -rf
@@ -160,4 +175,5 @@ install_tagbar
 install_nerdtree
 install_vimgo
 install_multiple_cursors
+install_vimclosetag
 install_configs
