@@ -68,6 +68,10 @@ nmap <F6> :set paste<CR>
 nmap <F7> :set nopaste<CR>
 "set pastetoggle=<F6>
 
+"autocomplete prompt for go whenever press dog(.)
+au filetype go inoremap <buffer> . .<C-x><C-o>
+
+
 " ==== 启用 pathogen
 call pathogen#infect()
 syntax on
