@@ -112,10 +112,10 @@ let NERDTreeShowLineNumbers=1   "NERDTree显示行号
 let NERDTreeWinSize=30   "NERDTree列表的宽度
 let NERDChristmasTree=1  "NERD添加色彩
 let NERDTreeAutoCenter=1 "光标移动超过一定距离时，是否自动将焦点调整到屏中心
-nnoremap <F2> :NERDTreeToggle<CR>  "打开与关闭nerdtree快捷键映射
+nnoremap <F4> :NERDTreeToggle<CR>  "打开与关闭nerdtree快捷键映射
 
 "============ 配置 Tagbar ===============
-nmap <F4> :TagbarToggle<CR>   "设置快捷键
+nmap <F2> :TagbarToggle<CR>   "设置快捷键
 let g:tagbar_width = 30       "设置宽度，默认为40
 autocmd VimEnter * nested :call tagbar#autoopen(1)    "打开vim时自动打开tagbar
 let g:tagbar_sort = 0       "按函数在源码中出现的顺序排序（为1则按函数名称排序）
