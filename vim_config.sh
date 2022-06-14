@@ -160,6 +160,22 @@ install_vimclosetag() {
 	check_install vim-closetag
 }
 
+# tutorial: https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL
+install_emmet() {
+	echo "install emmet-vim ..."
+
+	PLUGIN=$BUNDLEDIR/emmet-vim
+	SRC=https://github.com/mattn/emmet-vim
+
+	if [ -d $PLUGIN ]; then
+		git -C $PLUGIN config pull.rebase true
+		git -C $PLUGIN pull
+	else
+		git -C $BUNDLEDIR clone $SRC 1>/dev/null 2>/dev/null
+	fi
+	check_install emmet-vim
+}
+
 install_configs() {
 	echo "install configs ..."
 	cp $CONFIGDIR/*.vim $VIMDIR/syntax/ -rf
@@ -176,4 +192,5 @@ install_nerdtree
 install_vimgo
 install_multiple_cursors
 install_vimclosetag
+install_emmet
 install_configs
