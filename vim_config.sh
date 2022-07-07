@@ -62,11 +62,10 @@ env_init() {
 	if [ -d $TMP ]; then
 		rm -rf $TMP
 	fi
-	if [ ! -d $VIMDIR ]; then
-		mkdir -p $VIMDIR/autoload
-		mkdir -p $VIMDIR/bundle
-		mkdir -p $VIMDIR/syntax
-	fi
+	mkdir -p $VIMDIR/autoload
+	mkdir -p $VIMDIR/bundle
+	mkdir -p $VIMDIR/syntax
+
 	mkdir -p $TMP
 	check_os
 	install_tools
