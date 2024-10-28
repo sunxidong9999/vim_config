@@ -1,5 +1,6 @@
 # vim_config
-A shell script for vim configuration for CentOS/RedHat/Fedora/Debian/Ubuntu.
+
+A shell script for vim configuration for CentOS/RedHat/Debian/Ubuntu/Kylin.
 
 Usage:
 	./vim_config.sh
